@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="css/layout.css">
+     <!--Fonts from Google-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cont_1">
+<h4>Check the event status!</h4>
+
+    </div>
+    <div class="date_time">
+      
+<label for="Date">Date:</label>
+<input type="date" id="Date" name="Date">
+<br>
+<p>Select Time slot:</p>
+<label for="from">From:</label>
+<input type="time" id="from" name="from">
+<label for="to">To:</label>
+<input type="time" id="to" name="to">
+    </div>
+    <div>
+   <nav id="nav-bar" class="nav-link">
+   <a href="home.html" class="nav-link">Home</a> 
+   <a href="#"  class="nav-link">About</a> 
+   <a href="#"  class="nav-link">Contact</a> 
+   <a href="#"  class="nav-link">Faculty</a> 
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+     $(document).ready(function() {
+       let selectedHall = "";
+       
+       // Highlight selected hall
+       $(".click").click(function() {
+         $(".click").css("background-color", ""); // Reset others
+         $(this).css("background-color", "green");
+         selectedHall = $(this).text();
+       });
+   
+       // Submit booking
+       $("#next").click(function() {
+         const date = $("#Date").val();
+         const timeFrom = $("#from").val();
+         const timeTo = $("#to").val();
+   
+         if (!selectedHall || !date || !timeFrom || !timeTo) {
+           alert("Please fill all fields!");
+           return;
+         }
+   
+         $.ajax({
+           url: "bookHall",
+           type: "POST",
+           data: {
+             hallName: selectedHall,
+             date: date,
+             timeFrom: timeFrom,
+             timeTo: timeTo
+           },
+           success: function(response) {
+             alert(response);
+             window.location.href = "home.html";
+           },
+           error: function(xhr) {
+             alert("Error: " + xhr.responseText);
+           }
+         });
+       });
+     });
+
+     $(document).ready(function() {
+    function updateAvailability() {
+        $.ajax({
+            url: "getAvailability",
+            type: "GET",
+            success: function(response) {
+                // Update the UI with the availability status
+                // For example, change the color of the halls based on availability
+                response.forEach(function(hall) {
+                    if (hall.availability === 'Booked') {
+                        $('#' + hall.DeptName).css('background-color', 'blue');
+                    } else {
+                        $('#' + hall.DeptName).css('background-color', 'green');
+                    }
+                });
+            },
+            error: function(xhr) {
+                alert("Error: " + xhr.responseText);
+            }
+        });
+    }
+
+    setInterval(updateAvailability, 5000); // Update every 5 seconds
+});
+   </script>
+   
+   
+   <div class="map">
+    <div class="section mech"><button class="click">MECH</button></div>
+    <div class="section ece"><button class="click">ECE</button></div>
+    <div class="section cse"><button class="click">CSE</button></div>
+    <div class="section admin"><button class="click">Admin</button></div>
+    <div class="section it-eee"><button class="click">IECT</button></div>
+    <div class="section eee"><button class="click">EEE</button></div>
+    <div class="section civil-chem"><button class="click">Civil, Chem</button></div>
+    <div class="section library"><button class="click">Library</button></div>
+    <div class="section de"><button class="click">DE</button></div>
+
+  </div>
+</nav>
+
+</div>
+<button type="submit" id="next"><b>Next</b></button>
+</body>
+</html>

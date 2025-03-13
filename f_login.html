@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login as Faculty</title>
+  <link rel="stylesheet" href="css/f_login.css">
+   <!--Fonts from Google-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login as Faculty</h1>
+    <b><p class="login-subtitle">Login using social networks</p></b>
+    <div class="social-icons">
+      <img src="images/google.png" alt="Google">
+      <img src="images/linkedin.png" alt="Linkedin">
+      <img src="images/facebook.png" alt="Facebook">
+      <img src="images/apple.png" alt="Apple">
+    </div>
+    <p class="or-divider">Or</p>
+    <form action="login.jsp" method="POST">
+      <input id="email" type="email" placeholder="Email" required>
+      <input id="password" type="password" placeholder="Password" required>
+      <div class="options">
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+      <button type="submit" class="login-btn">Sign In</button>
+    </form>
+    <p class="signup-link">New Here? <a href="#">Sign up.</a></p>
+  </div>
+</body>
+</html>

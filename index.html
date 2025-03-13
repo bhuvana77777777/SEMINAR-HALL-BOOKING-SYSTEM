@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+
+    <!--Fonts from Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+        <header>
+            <b>Simplifying your Campus Events, One Click at a Time!</b>
+        </header>
+    </div>
+    <div>
+        <nav id="nav-bar" class="nav-link">
+            <a href="#" class="nav-link">Home</a> 
+            <a href="#" class="nav-link">About</a> 
+            <a href="#" class="nav-link">Contact</a> 
+            <a href="#" class="nav-link">Faculty</a> 
+            <div class="arc-frame"></div>
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- Main Content -->
+            <div class="box">
+                <div class="book-hall">
+                    <a href="f_login.html"><img id="icon" src="images/book-hall.png"></a> 
+                    <b><p class="i_name">Book a hall</p></b>
+                </div>
+                <div class="request">
+                    <a href="request.html"><img id="icon" src="images/request.png"></a>
+                    <b><p class="i_name">Request Booking</p></b>
+                </div>
+                <div class="event-list">
+                    <a href="layout.html"><img id="icon" src="images/event-list.png"></a>
+                    <b><p class="i_name">Event List</p></b>
+                </div>
+                <div class="user-manual">
+                    <a href="user.html"><img id="icon" src="images/user-manual.png"></a>
+                    <b><p class="i_name">Instructions</p></b>
+                </div>
+            </div>
+
+            <!-- Admin Login Section (Positioned on the Right) -->
+            <div class="admin-login">
+                <h3>Admin Login</h3>
+                <form action="adminLogin.jsp" method="post">
+                    <label for="adminEmail">Email:</label>
+                    <input type="email" id="adminEmail" name="adminEmail" required>
+                    
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword" name="adminPassword" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <b>
+            <address class="address">
+                Address:<br>
+                MVGR College of Engineering(A)<br>
+                Vijayaram Nagar campus, Chintalavalasa, Vizianagaram<br>
+                Andhra Pradesh 535005<br>
+                Contact: 08922 241732/241039
+            <br></address>
+        </b>
+    </footer>
+</body>
+</html>

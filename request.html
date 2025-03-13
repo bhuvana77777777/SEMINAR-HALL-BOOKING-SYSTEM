@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Form</title>
+    <link rel="stylesheet" href="css/request.css">
+
+     <!--Fonts from Google-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+
+   
+   <script>
+    
+function submitRequest() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phoneno").value.trim();
+    let eventTitle = document.getElementById("event-title").value.trim();
+    let fromTime = document.getElementById("from-time").value.trim();
+    let toTime = document.getElementById("to-time").value.trim();
+    let capacity = document.getElementById("capacity").value.trim();
+    let hall = document.getElementById("hall").value.trim();
+    let date = document.getElementById("date").value.trim();
+
+    if (name === "") {
+        alert("Please fill in your name.");
+        return;
+    }
+    if (email === "") {
+        alert("Please fill in your email.");
+        return;
+    }
+    if (phone === "") {
+        alert("Please fill in your phone number.");
+        return;
+    }
+    if (eventTitle === "") {
+        alert("Please fill in the event title.");
+        return;
+    }
+    if (fromTime === "") {
+        alert("Please select a start time.");
+        return;
+    }
+    if (toTime === "") {
+        alert("Please select an end time.");
+        return;
+    }
+    if (capacity === "") {
+        alert("Please select a capacity.");
+        return;
+    }
+    if (hall === "") {
+        alert("Please select a hall.");
+        return;
+    }
+    if (date === "") {
+        alert("Please select a date.");
+        return;
+    }
+
+    alert("Your seminar hall booking request has been submitted successfully!");
+}
+
+// Function to update available halls based on capacity
+function updateHalls() {
+    const halls = {
+        "60": ["Admin Auditorium"],
+         "200": ["Admin Seminar Hall 1", "Admin Seminar Hall 2", "Library Auditorium"],
+         "120": ["CSE","ECE", "Civil, EEE, Chemical", "Data Science", "Mech, MBA", "IT"]
+        
+     };
+
+    let selectedCapacity = document.getElementById("capacity").value;
+    let hallSelect = document.getElementById("hall");
+    hallSelect.innerHTML = "";
+
+    halls[selectedCapacity].forEach(hall => {
+        let option = document.createElement("option");
+        option.value = hall;
+        option.textContent = hall;
+        hallSelect.appendChild(option);
+    });
+}
+   </script>
+</head>
+<body>
+    <div id="divv">
+        <!-- Left side: Form Section -->
+        <div id="field1">
+            <h1>Please fill the Request form :</h1>
+            <form class="form-container">
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-row">
+                    <label for="role">Role:</label>
+                    <input id="role" type="text" placeholder="Enter your role">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="Enter your mail">
+                </div>
+                <div class="form-row">
+                    <label for="phoneno">Phone No.:</label>
+                    <input id="phoneno" minlength="10" type="tel" placeholder="Enter your phone number">
+                </div>
+                <div class="form-row">
+                    <label for="organisation-name">Organization name:</label>
+                    <input id="organisation-name" placeholder="Enter your organization name">
+                </div>
+                <div class="form-row">
+                    <label for="event-title">Event title:</label>
+                    <input id="event-title" placeholder="Enter your event title">
+                </div>
+    
+                <div class="form-row time-group">
+                    <label for="from-time">Time:</label>
+                    <input type="time" id="from-time" required>
+                    <span>to</span>
+                    <input type="time" id="to-time" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="capacity">Maximum Attendees: </label>
+                    <select id="capacity" onchange="updateHalls()">
+                        <option value="60">60</option>
+                        <option value="120">120</option>
+                        <option value="200">200</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="hall">Select Hall:</label>
+                    <select id="hall"></select>
+                </div>
+
+                <div class="form-row">
+                    <label for="date">Select Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                
+            
+                <div class="form-row">
+                    <label for="description">Brief Description on Event:</label>
+                    <textarea id="description" rows="5" cols="30"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right side: Information and Button -->
+        <div id="subf">
+            <div class="navbar">
+                <nav>
+                    <b><a href="home.html">Home</a></b>
+                    <b><a href="#">About</a></b>
+                    <b><a href="#">Contact</a></b>
+                    <b><a href="#">Faculty</a></b>
+                </nav>
+            </div>
+            <div class="info">
+                <b><p id="para">We welcome all kinds of Workshops, Summits, Meetings, and Educational Events!</p></b>
+                <label for="sub">   
+                    <button id="sub" type="button" value="Submit Request" onclick="submitRequest()">Submit</button>
+                </label>
+            </div>
+        </div>
+    </div>,
+</body>
+</html>
