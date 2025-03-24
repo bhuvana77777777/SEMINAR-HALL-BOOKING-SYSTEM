@@ -1,0 +1,174 @@
+*
+{
+    font-family: Signika;
+}
+
+h1
+{
+    color:#58735E;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1D2E28;
+    color: #c9e0c8;
+    text-align: center;
+  }
+  
+  .navbar {
+    
+    padding: 15px 0;
+    display: flex;
+  align-items: center;
+  position:relative;
+ 
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: #c9e0c8;
+    font-weight: bold;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  .navbar .logout {
+    position: absolute; 
+  top: 15px; 
+  right: 20px; 
+  text-decoration: none;
+  color: #c9e0c8;
+  font-weight: bold; 
+  margin-right:2px;
+  }
+
+  
+  .container {
+    padding: 40px;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2e4a4c;
+    color: #e8e8e8;
+    font-size: 1rem;
+  }
+  
+  .search-bar input::placeholder {
+    color: #c1c1c1;
+  }
+  .search-container {
+  position: relative;
+  width: 400px;
+  margin: 20px auto;
+ 
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Adds space for the icon inside the input field */
+  border: 2px solid #6fcf97;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #223d3f;
+  color: #000000;
+}
+
+.search-container input::placeholder {
+  color: #58735E;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Aligns the icon inside the input box */
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000000;
+  pointer-events: none; /* Ensures the icon doesn’t block input focus or clicks */
+}
+
+  .info-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 50px;
+  }
+  
+  .info-card {
+    background-color: #58735E;
+    padding: 20px;
+    border-radius: 40px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .info-card .icon img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .info-card p {
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #c1c1c1;
+  }
+  
+  .additional-icons img {
+    width: 30px;
+    margin: 5px;
+  }
+  .departments {
+    text-align: left; 
+    width: 300px;  
+  }
+  
+  .departments h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .departments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .departments ul li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center; 
+  }
+  
+  .departments ul li::before {
+    content: "●"; 
+    color: #58735E;
+    font-size: 1.2rem; 
+    margin-right: 10px; 
+  }
+  #search
+  {
+    background-color: #c9e0c8;
+  }

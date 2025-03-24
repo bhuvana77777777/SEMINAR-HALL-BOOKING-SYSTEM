@@ -1,0 +1,166 @@
+
+
+/* Reset body and html margin and padding to allow for full-page layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Signika;
+    background-color: #1D2E28;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    flex-direction: column;
+    min-height: 100%;
+}
+
+#divv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Left side: Form Section */
+#field1 {
+    color: #c9e0c8;
+   
+    padding: 20px;
+    flex: 1;
+    max-width: 600px; /* Limit max width for better readability */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#field1 h1 {
+    margin-bottom: 20px; /* Space below heading */
+    text-align: left; /* Align heading to the left */
+}
+
+/* Form Layout */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Arrange form rows vertically */
+    gap: 1rem; /* Space between rows */
+}
+
+.form-row {
+    display: flex;
+    align-items: center; /* Align labels and inputs */
+    justify-content: space-between; /* Spread label and input */
+    gap: 10px; /* Add spacing between label and input */
+}
+
+label {
+    width: 30%; /* Fixed width for labels */
+    text-align: left;
+}
+
+input, select, textarea {
+    background-color: #c9e0c8;
+    width: 70%; /* Inputs take the rest of the space */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Signika;
+    border: 1px solid #ddd;
+}
+
+/* Right side: Information and Submit Button Section */
+#subf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.navbar {
+   
+    font-family: Signika;
+    font-size: 23px;
+    padding-top: 10px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: end;
+    display: inline;
+    color:#c9e0c8;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.navbar a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #0f312d;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: green;
+}
+
+.info {
+    display:flex;
+    flex:1;
+    width:600px;
+    height:300px;
+    background-color:#c9e0c8;
+   border-bottom-left-radius: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #10201a;
+    padding: 20px;
+    text-align: center;
+    margin-right:-400px;
+    margin-top:-300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+}
+
+#sub {
+    padding: 20px 10px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 25px;
+    color: #f4f9f8;
+    background-color: #0f312d;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: -400px;
+}
+
+
+
+@media (max-width: 768px) {
+    #divv {
+        flex-direction: column;
+        align-items: center; /* Center items for mobile view */
+    }
+
+    #field1 {
+        width: 100%;
+        max-width: none;
+    }
+
+    .info {
+        width: 100%;
+    }
+}
+
+#para
+{
+font-family: Signika;
+color:#1D2E28;
+font-size: 30px;
+margin-bottom:450px ;
+padding-right: 30px;
+padding-left: 10px;
+}

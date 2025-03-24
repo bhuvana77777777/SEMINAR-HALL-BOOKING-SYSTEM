@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Signika;
+    background-color: #1D2E28;
+    color: #c9e0c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+   
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+   
+  }
+  
+  h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+  }
+  
+  .login-subtitle {
+    font-family: Signika;
+    margin: 5px 0 20px;
+    font-size: 0.9em;
+    color: #3F614A;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  
+  .or-divider {
+    font-size: 0.9em;
+    margin: 15px 0;
+    color: #3F614A;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e4a4c;
+    color: #e8e8e8;
+  }
+  
+  form input::placeholder {
+    color: #c1c1c1;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5px;
+  }
+  .social-icons img:hover {
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .forgot-password {
+    font-family: Signika;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #a8c4c6;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .login-btn {
+    font-family: Signika;
+    width: 30%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3f614a;
+    border: none;
+    border-radius: 17px;
+    color: #c9e0c8;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    background-color: #315759;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  
+  .signup-link a {
+    text-decoration: none;
+    color: #a8c4c6;
+    font-weight: bold;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  #email, #password
+  {
+    font-family: Signika;
+    border-radius: 13px;
+    background-color:#3F614A ;
+  }
